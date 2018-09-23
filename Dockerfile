@@ -2,7 +2,7 @@ FROM debian:stretch
 
 MAINTAINER buildmaster@rocket.chat
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get install gnupg
+RUN apt-get update && apt-get install -y gnupg
 
 # gpg: key 4FD08014: public key "Rocket.Chat Buildmaster <buildmaster@rocket.chat>" imported
 RUN gpg --keyserver ha.pool.sks-keyservers.net --recv-keys 0E163286C20D07B9787EBE9FD7F9D0414FD08104
